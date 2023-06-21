@@ -172,6 +172,45 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "ScriptHubV1",
+	Callback = function()
+	OrionLib:MakeNotification({
+	Name = "Executed !",
+	Content = "Succesfly executed SCRIPTHUBV1 ",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+      		print(loadstring(game:HttpGet('https://pastebin.com/raw/qJbUSVZc'))())
+  	end    
+})
+
+Tab:AddButton({
+	Name = "rainbow-character",
+	Callback = function()
+	OrionLib:MakeNotification({
+	Name = "Executed !",
+	Content = "Succesfly executed rainbow-character ",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+      		print(for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                if v:IsA("MeshPart") then
+                    v.Material = "ForceField"
+                    spawn(function()
+                        while wait() do
+                            for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                                if v:IsA("MeshPart") then
+                                    v.Color = Color3.fromHSV(tick()%5/5,1,1)
+                                    wait()
+                                end
+                            end 
+                        end
+                    end)
+                end)
+  	end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "Brookhaven",
 	Icon = "rbxassetid://4483345998",
